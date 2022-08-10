@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<form th:action="@{new-book}" th:object="${book}" method="post">
+    <label for="title_input">Title:</label>
+    <input type="text" th:field="*{title}" placeholder="title" id="title_input">
+    <br>
+    <label for="pagesNo_input">Number of pages:</label>
+    <input type="number" th:field="*{pages}" placeholder="page number" id="pagesNo_input">
+    <br>
+    <label for="publisher_input">Publisher:</label>
+    <input type="text" th:field="*{publisher}" placeholder="publisher" id="publisher_input">
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
 </body>
 </html>

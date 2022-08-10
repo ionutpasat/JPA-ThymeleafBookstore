@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -17,7 +17,7 @@ public class Book {
     private int id;
     private String title;
     @ManyToMany
-    private Set<Author> authorList;
+    private List<Author> authorList;
     private int pages;
     private String publisher;
 

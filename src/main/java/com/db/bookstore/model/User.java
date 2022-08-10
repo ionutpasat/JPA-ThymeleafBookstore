@@ -11,7 +11,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,6 +21,4 @@ public class User {
     private String name;
     private String password;
     private String role;
-
-
 }

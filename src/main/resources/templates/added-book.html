@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Customer added successfully</h3>
+<div th:object="${book}">
+    <p th:text="'BookID: ' + *{id}"></p>
+    <p th:text="'Title: ' + *{title}"></p>
+<!--    author-->
+    <p th:text="'PageNo: ' + *{pages}"></p>
+    <p th:text="'Publisher: ' + *{publisher}"></p>
+</div>
+</body>
+</html>

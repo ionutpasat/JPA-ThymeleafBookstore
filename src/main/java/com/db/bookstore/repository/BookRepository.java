@@ -11,4 +11,8 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book, Integer> {
     @Query(value = "SELECT * FROM book", nativeQuery = true)
     List<Book> getAllBooks();
+//    @Query(value = "INSERT INTO book (pages, publisher, title) VALUES (?, ?, ?)", nativeQuery = true)
+//    void insertBook(int pages, String publisher, String title);
+    @Query(value = "SELECT COUNT(*) FROM books", nativeQuery = true)
+    int getBookNo();
 }

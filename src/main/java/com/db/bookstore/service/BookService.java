@@ -1,7 +1,6 @@
 package com.db.bookstore.service;
 
 import com.db.bookstore.model.Book;
-import com.db.bookstore.model.User;
 import com.db.bookstore.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,5 +20,13 @@ public class BookService {
         }
 
         return books;
+    }
+
+    public void insertBook(Book book) {
+        bookRepository.save(book);
+    }
+
+    public int getBookNo() {
+        return bookRepository.getBookNo();
     }
 }
