@@ -1,0 +1,1 @@
+INSERT INTO user (email, name, password, role, username) VALUES ("admin@istrator.com", "Admin", "admin123", "admin", "admin.istrator");
